@@ -1,0 +1,350 @@
+:root {
+    --orange: hsl(26, 100%, 55%);
+    --white: hsl(0, 0%, 100%);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Kumbh Sans', sans-serif;
+}
+
+.flex {
+    display: -webkit-flex;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Header styles */
+header {
+    width: 80%;
+    margin: auto;
+    border-bottom: 1px solid hsl(220, 14%, 75%);
+}
+
+header img[alt="logo"] {
+    padding-bottom: 6px;
+}
+
+nav {
+    margin-left: 20px;
+}
+
+nav ul {
+    list-style-type: none;
+}
+
+nav ul li {
+    float: left;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: hsl(219, 9%, 45%);
+    display: inline-block;
+    margin: 0px 15px;
+    padding: 24px 0px 30px;
+}
+
+nav ul li a:hover {
+    border-bottom: 3px solid var(--orange);
+    padding: 24px 0px 27px;
+}
+
+header #cart-dropdown {
+    position: absolute;
+    background-color: var(--white);
+    width: 280px;
+    right: -140px;
+    margin-top: 15px;
+    box-shadow: 0px 10px 15px 0px hsl(220, 14%, 75%);
+    border-radius: 10px;
+    display: none;
+}
+
+#cart-dropdown > p {
+    border-bottom: 1px solid hsl(220, 14%, 75%);
+    padding: 20px;
+}
+
+#cart-dropdown #cart-details {
+    padding: 20px;
+    display: none;
+}
+
+#cart-dropdown #cart-details p span {
+    font-weight: 700;
+}
+
+#cart-dropdown button {
+    width: 100%;
+    padding: 12px;
+    color: var(--white);
+    background-color: var(--orange);
+    border-radius: 10px;
+    margin-top: 10px;
+    border: none;
+    font-weight: 700;
+}
+
+#cart-details .flex div {
+    margin: 0px 5px;
+    font-size: 0.8rem;
+}
+
+#cart-dropdown #product {
+    width: 45px;
+    border-radius: 7px;
+}
+header #avatar {
+    width: 40px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+header #avatar:hover {
+    border: 2px solid var(--orange);
+}
+
+.cart-container {
+    margin-right: 25px;
+    position: relative;
+}
+
+.cart-container > img {
+    width: 18px;
+}
+
+.cart-container .cart-counter {
+    background-color: var(--orange);
+    color: var(--white);
+    font-size: 0.6rem;
+    display: inline-block;
+    padding: 0px 7px;
+    border-radius: 10px;
+    position: absolute;
+    right: -8px;
+    top: -5px;
+}
+
+p#empty-cart {
+    text-align: center;
+    padding: 60px 0px;
+    color:  hsl(219, 9%, 45%);
+    font-weight: 700;
+    font-size: 0.9rem;
+}
+
+/* Main styles */
+main {
+    padding: 30px 0px;
+    width: 80%;
+    margin: auto;
+}
+
+main > * {
+    width: 40%;
+}
+
+main > div > img {
+    width: 100%;
+    border-radius: 15px;
+    margin-bottom: 20px;
+}
+
+main > div > .thumbnails img {
+    width: 22%;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+main > div > .thumbnails img:hover {
+    opacity: 0.6;
+}
+
+.active-thumbnail {
+    opacity: 0.5;
+    border: 2px solid var(--orange);
+}
+
+.product-details .company {
+    text-transform: uppercase;
+    color: var(--orange);
+    font-weight: 700;
+}
+
+.product-details > h1 {
+    font-size: 2.5rem;
+    line-height: 1.2;
+    margin: 15px 0px;
+}
+
+.product-details .description {
+    margin: 20px 0px;
+    font-size: 0.9rem;
+    color: hsl(219, 9%, 45%);
+    line-height: 1.5;
+}
+
+.product-details .price-details {
+    margin: 20px 0px;
+}
+
+.price-details #amount {
+    font-size: 1.5rem;
+    font-weight: 700;
+    display: inline-block;
+    margin-right: 15px;
+}
+
+.price-details #discount {
+    display: inline-block;
+    color: var(--orange);
+    font-weight: 700;
+    background-color: hsl(25, 100%, 94%);
+    padding: 2px 7px;
+    border-radius: 7px;
+}
+
+.price-details #actual-amount {
+    text-decoration: line-through;
+    font-weight: 700;
+    margin-top: 10px;
+    color: hsl(220, 14%, 75%);
+}
+
+.btn-container .flex > * {
+    padding: 10px;
+    font-weight: 700;
+}
+
+.btn-container .flex button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-container .flex button:first-child {
+    padding-top: 5px;
+}
+
+.btn-container .flex {
+    background-color: hsl(223, 64%, 98%);
+    border-radius: 10px;
+    width: 35%;
+    padding: 0px 10px;
+}
+
+.btn-container > button {
+    background-color: var(--orange);
+    width: 50%;
+    font-weight: 700;
+    color: var(--white);
+    padding: 14px 20px;
+    border: none;
+    border-radius: 10px;
+}
+
+
+.btn-container > button > img {
+    width: 15px;
+    margin-right: 10px;
+}
+
+/* Modal styles */
+.modal-container {
+    background-color: hsla(0, 0%, 0%, 0.75);
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+
+.modal {
+    width: 30%;
+    margin: auto;
+    text-align: right;
+}
+
+.modal > svg {
+    cursor: pointer;
+}
+.modal > svg:hover path {
+    fill: var(--orange);
+}
+.modal > svg path {
+    fill: #fff;
+}
+
+.modal div img[alt=image-product-1] {
+    width: 100%;
+    border-radius: 15px;
+}
+
+.modal .modal-thumbnails {
+    width: 80%;
+    margin: auto;
+}
+
+.modal .modal-thumbnails > span {
+    width: 22%;
+    background-color: var(--white);
+    border-radius: 10px;
+    display: inline-block;
+    padding-bottom: 0px;
+    position: relative;
+    height: 70px;
+    border: none;
+}
+
+.modal .modal-thumbnails span > img {
+    width: 100%;
+    border-radius: 8px;
+    cursor: pointer;
+    height: 100%;
+    position: absolute;
+    z-index: 2;
+    left: 0px;
+    object-fit: cover;
+}
+
+.modal .modal-thumbnails img:hover {
+    opacity: 0.6;
+}
+
+.modal div:first-of-type {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.modal div:first-of-type > .navigation-button {
+    position: absolute;
+    top: 50%;
+    border-radius: 50%;
+    background-color: var(--white);
+    width: 30px;
+    height: 30px;
+    border: none;
+    cursor: pointer;
+}
+
+.modal div:first-of-type > .navigation-button:hover  path{
+    stroke: var(--orange);
+}
+
+.modal div:first-of-type > .navigation-button[alt=icon-previous] {
+    left: -13px;
+    padding: 5px 5px 0px 0px;
+}
+
+
+.modal div:first-of-type > .navigation-button[alt=icon-next] {
+    right: -15px;
+    padding: 5px 0px 0px 5px;
+}
