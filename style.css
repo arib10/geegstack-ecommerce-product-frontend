@@ -50,9 +50,11 @@ nav ul li a {
 
 nav ul li {
     padding: 10px;
+    margin: 15px;
 }
+
 nav ul li a:hover {
-    border-bottom: 5px dotted var(--orange);
+    border-bottom: 3ps solid var(--orange);
     padding: 24px 0px 27px;
 }
 
