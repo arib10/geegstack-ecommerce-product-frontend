@@ -348,3 +348,12 @@ main > div > .thumbnails img:hover {
     right: -15px;
     padding: 5px 0px 0px 5px;
 }
+
+@media screen and (max-width: 800px) {
+    main.flex {
+        flex-direction: column;
+    }
+    main.flex > * {
+        width: 100%;
+    }
+}
