@@ -48,13 +48,9 @@ nav ul li a {
     padding: 24px 0px 30px;
 }
 
-nav ul li {
-    padding: 10px;
-    margin: 15px;
-}
 
 nav ul li a:hover {
-    border-bottom: 3ps solid var(--orange);
+    border-bottom: 3px solid var(--orange);
     padding: 24px 0px 27px;
 }
 
